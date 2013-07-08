@@ -41,16 +41,19 @@ var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
 };
 
+var cheerioUrlResult = function(result) {
+    return cheerio.load(result);
+};
+
 var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
-var checkHtmlFile = function(htmlfile, checksfile) {
-    $ = cheerioHtmlFile(htmlfile);
+var checkHtml = function(ctree, checksfile) {    
     var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
-        var present = $(checks[ii]).length > 0;
+        var present = ctree(checks[ii]).length > 0;
         out[checks[ii]] = present;
     }
     return out;
@@ -62,17 +65,23 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
-var buildfn = function(outfile) {
-    var result2file = function(result) {
-        if (result instanceof Error) {
-            console.error('Error: ' + result.message);
-            process.exit(1);
-        } else {                 
-            fs.writeFileSync(outfile, result);
-        }
-    };
-    return result2file;
+var checkAndWrite = function(ctree) {
+    var checkJson = checkHtml(ctree, program.checks);
+    var outJson = JSON.stringify(checkJson, null, 4);
+    console.log(outJson);
+    fs.writeFileSync("out.txt", outJson);
 };
+
+var result2file = function(result) {
+    if (result instanceof Error) {
+        console.error('Error: ' + result.message);
+        process.exit(1);
+    } else {
+        // this is async !!                     
+        checkAndWrite(cheerioUrlResult(result));
+    }
+};
+
 
 if(require.main == module) {
     program
@@ -81,13 +90,8 @@ if(require.main == module) {
         .option('-u, --url <link>', 'Url to site')
         .parse(process.argv);
 
-    var result2file = buildfn("downloaded_index.html");
-    program.url && rest.get(program.url).on('complete', result2file);
+    program.url ? rest.get(program.url).on('complete', result2file) : checkAndWrite(cheerioHtmlFile(program.file));
 
-    var checkJson = program.file ? checkHtmlFile("downloaded_index.html", program.checks) : checkHtmlFile(program.file, program.checks);
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
-    fs.writeFileSync("out.txt", outJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
