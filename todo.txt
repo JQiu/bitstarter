@@ -5,7 +5,8 @@ CSS
 - Refactor / cleaa up some selectors
 
 HTML
-* Fill out FAQ more
+* Update statistics
+- Fill out FAQ more
 
 Assets
 * Create last image thing
