@@ -1,0 +1,15 @@
+CSS
+* Fix nav - jumbotron border gap
+- Change gradient
+- Create pseudo classes
+- Refactor / cleaa up some selectors
+
+HTML
+* Fill out FAQ more
+
+Assets
+* Create last image thing
+- Fix border on images
+- Create logo
+
+JS
