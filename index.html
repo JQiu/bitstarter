@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>Clk Clk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">  
@@ -11,96 +11,7 @@
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800">
-    <style type="text/css">
-      /* Large desktop */
-      @media (min-width: 980px) {
-        body {
-          padding-top: 60px;
-        }
-        .linediv-l {
-          border-right: 1px white solid;
-        }
-        .liinediv-r {
-          border-left: 1px white solid;
-        }
-      }
-
-      /* Landscape phones and down */
-      @media (max-width: 480px) {
-        .copy {
-          padding: 2.5% 10%;
-        }
-        .linediv-l {
-          border-bottom: 1px white solid;
-        }
-        .linediv-r {
-          border-top: 1px white solid;
-        }
-      }
-
-      /* All form factors */
-
-      /* Main body and headings */
-      body {
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
-      }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 24px;
-      }
-
-      /* Nav bar */
-      .nav-collapse {
-        float: right;
-        /*right: 7%;*/
-      }    
-      /* Video pitch and action */
-      .pitch {
-        padding: 2.5% 0%;
-      }
-      .order {
-        padding: 2% 0%;
-      }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .therometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
-        color: white;
-      }
-
-      /* Marketing copy and footer */
-      .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
-      }
-      .asset {
-        padding: 2.5% 0%;
-      }
-      .footer {
-        color: #cccccc;
-        text-align: center;
-      }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
-      }    
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/clkclk.css">
   </head>
   <body>
     <!-- Mobile-friendly navbar adapted from example. -->
@@ -113,12 +24,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>            
+            <span class="icon-bar"></span>
           </button>
-          <a href="#" class="brand">Bitstarter</a>
+          <a href="#" class="brand">Clk Clk</a>
           <div class="nav-collapse collapse">
-            <ul class="nav">
+            <ul class="nav pull-right">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
+              <li><a href="#demo">Demo</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -126,89 +39,88 @@
       </div>
     </div>
 
+    <div class="jumbotron masthead">
+      <div class="container">
+        <div class="row-fluid heading">
+          <div class="span12">
+            <h1>Clk Clk</h1>
+          </div>
+        </div>
+        <div class="row-fluid subheading">
+          <div class="span12">
+            <!-- Special typography from Bootstrap for lead paragraph. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+            <p class="lead">Groove generator in the browser!</p>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span12 actions">                          
+            <div class="span8 offset2">
+              <div class="statistics">
+                <div class="span4">
+                  <!-- linediv-l and linediv-r give dividing lines that look different in
+                  horizontal and vertical layouts, illustrating media queries -->
+                  <div class="linediv-l">
+                    <h3>1000</h3> 
+                    <p>backers</p>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="linediv-c">
+                    <h3>$6000</h3>
+                    <p>of $10,000</p>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="linediv-r">
+                    <h3>10</h3>
+                    <p>days left</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="span10 offset1">
+              <!-- Bootstrap progress bar -->
+              <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+              <div class="therometer progress active">
+                <div class="bar bar-success" style="width: 60%;"></div>
+                <div class="bar bar-warning" style="width: 40%;"></div>
+              </div>
+            </div>
+            <div class="span12 support">
+              <!-- Bootstrap progress bar -->
+              <!-- http://twitter.github.io/bootstrap/bass-css.html#buttons -->
+              <button class="btn btn-success btn-large">Support</button>
+            </div>
+            <div class="span12 social">
+              <!-- Social buttons are not included in default Bootstrap -->
+              <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+              <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+              <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+          
+    </div>
+
+
     <!-- We use row-fluid inside containers to achieve a resizable layout. -->
     <!-- blogs.endjin.com/2013/04/tips-forimplementing-responsive-designs-usingbootstrap -->
     <!-- stackoverflow.com/a/12270322 -->
-    <div class="container">    
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- http://www.google.com/fonts/specimen/Ubuntu -->
-      <!-- http://www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>Product</h1>
-        </div>
-      </div>
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
-        </div>
-      </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img src="http://placehold.it/480x300" alt="Video" class="img-polaroid">
-        </div>
-
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons -->
-        <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look different in
-                horizontal and vertical layouts, illustrating media queries -->
-                <div class="linediv-l">
-                  <h3>1000</h3> 
-                  <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$6000</h3>
-                  <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                  <h3>10</h3>
-                  <p>days left</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="therometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
-            </div>
-          </div>
-          <div class="span6 offset3 order">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/bass-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
-          <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-          </div>
-        </div>
-      </div>
-      
+    <div class="container">                        
       <!-- Beyond this part the marketing copy begins. -->
       <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img src="http://placehold.it/480x300" alt="Section1" class="img-polaroid">
+          <img src="./assets/clkclk-canvas.png" alt="Section1" class="img-polaroid">
         </div>
         <div class="span5 copy">
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris.
+            Drag and interact with elements on the canvas to start creating grooves.
           </p>
         </div>
       </div>
@@ -216,11 +128,40 @@
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris.
+            Save, tag, and share your grooves individually or in presets.
           </p>
         </div>
         <div class="span5 asset">
-          <img src="http://placehold.it/480x300" alt="Section2" class="img-polaroid">          
+          <img src="./assets/clkclk-save.png" alt="Section2" class="img-polaroid">          
+        </div>
+      </div>
+
+      <div class="row-fluid section3">
+        <div class="span5 offset1 asset">
+          <img src="./assets/clkclk-canvas.png" alt="Section3" class="img-polaroid">
+        </div>
+        <div class="span5 copy">
+          <p>
+            Browse and search for grooves by names, tags, and groove makers you follow. Preview, edit, or export to your favourite DAW and virtual instrument.
+          </p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <hr>
+        </div>
+      </div>
+
+      <!-- Sequenced demo -->
+      <div class="row-fluid" id="demo">
+        <div class="span12 demo">
+          <h2>See it in action!</h2>
+          <img src="http://placehold.it/960x300" alt="Canvas" class="img-polaroid">
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <hr>
         </div>
       </div>
 
@@ -232,12 +173,12 @@
               <div class="accordian-heading">
                 <a href="#collapseOne" class="accordian-toggle"
                    data-toggle="collapse" data-parent="#accordian2">
-                  What does FAQ stand for?
+                  What is Clk Clk?
                 </a>
               </div>
               <div class="accordian-body collapse" id="collapseOne">
                 <div class="accordian-inner">
-                  Frequently Asked Question.
+                  Clk Clk is a browser based groove generator based off Euclidean rhythms. 
                 </div>
               </div>
             </div>
@@ -245,12 +186,12 @@
               <div class="accordian-heading">
                 <a href="#collapseTwo" class="accordian-toggle"
                    data-toggle="collapse" data-parent="#accordian2">
-                  What's a Frequently Asked Question?
+                  Is Clk Clk free?
                 </a>
               </div>
               <div class="accordian-body collapse" id="collapseTwo">
                 <div class="accordian-inner">
-                  A question which is commonly asked by users.
+                  Yes! Clk Clk is completely free to use.
                 </div>
               </div>
             </div>
@@ -258,15 +199,10 @@
         </div>
 
       </div>
-
-      <!-- Not crucial, but we put this under a CC By-SA 3.0 license -->
-      <!-- http://creativecommons.org/licenses/ -->
+      
       <div class="row-fluid footer">
         <div class="span12">
-          <p>This work is licensed under the 
-            <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>, 
-            without all the cruft that would otherwise be put at the bottom of the page.
-          </p>
+          <p>&copy; Jimmy Qiu 2013</p>
         </div>
       </div>
 

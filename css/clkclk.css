@@ -1,0 +1,167 @@
+/* Large desktop */
+@media (min-width: 980px) {
+  body {
+    padding-top: 60px;
+  }
+  .linediv-l {
+    border-right: 1px white solid;
+  }
+  .liinediv-r {
+    border-left: 1px white solid;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .copy {
+    padding: 2.5% 10%;
+  }
+  .linediv-l {
+    border-bottom: 1px white solid;
+  }
+  .linediv-r {
+    border-top: 1px white solid;
+  }
+}
+
+/* All form factors */
+
+/* Main body and headings */
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.heading, .subheading {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+p.lead {
+  padding-top: 1.5%;
+  font-size: 24px;
+  line-height: 30px;
+}
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.jumbotron {
+  position: relative;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  background: #020031; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #020031 0%, #aaaaaa 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#aaaaaa)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #020031 0%,#aaaaaa 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #020031 0%,#aaaaaa 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #020031 0%,#aaaaaa 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #020031 0%,#aaaaaa 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+.jumbotron h1 {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
+
+/* Link styles (used on .masthead-links as well) */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
+/* Background image */
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../assets/grey_wash_wall.png) repeat center center;
+  opacity: .4;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1) {
+
+  .jumbotron:after {
+    background-size: 150px 150px;
+  }
+
+}
+
+/* Video pitch and action */
+.pitch {
+  padding: 2.5% 0%;
+}
+.support {
+  padding: 2% 0%;
+}
+.actions {
+  /*background-color: #343434;*/
+  padding: 3% 0%;
+}
+.video, .therometer, .support, .social, .statistics {
+  text-align: center;
+}
+.statistics h3, .statistics p {
+  color: white;
+}
+
+/* Demo */
+.demo {
+  text-align: center;
+  padding: 2% 0;
+}
+.demo img {
+  margin: 50px auto;    
+}
+
+/* Marketing copy and footer */
+.copy {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  text-align: justify;
+}
+.asset {
+  padding: 2.5% 0%;
+}
+.asset img {
+  border: none;
+}
+.footer {
+  color: #cccccc;
+  text-align: center;
+}
+.footer p {
+  font-size: 11px;
+}
+.footer a {
+  color: #ccccff;
+}    
